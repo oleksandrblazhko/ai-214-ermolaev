@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://example.com/request.schema.json",
+  "title": "Record of Request",
+  "description": "This document records the details of a request",
+  "type": "object",
+  "properties": {
+    "Users": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "login": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "required": [
+            "login",
+            "password",
+            "email"
+          ]
+        }
+      }
+    },
+    "Requests": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "purpose": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "user id": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "purpose",
+            "date",
+            "user id"
+          ]
+        },
+        "2": {
+          "type": "object",
+          "properties": {
+            "purpose": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "user id": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "purpose",
+            "date",
+            "user id"
+          ]
+        }
+      }
+    },
+    "SingExperts": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "specialization": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "specialization"
+          ]
+        }
+      }
+    },
+    "MedicalConsultants": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "specialization": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "specialization"
+          ]
+        }
+      }
+    },
+    "ResponsesToRequests": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "response text": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "request id": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "response text",
+            "date",
+            "request id"
+          ]
+        },
+        "2": {
+          "type": "object",
+          "properties": {
+            "response text": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "request id": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "response text",
+            "date",
+            "request id"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "Users",
+    "Requests",
+    "SingExperts",
+    "MedicalConsultants",
+    "ResponsesToRequests"
+  ]
+}
