@@ -1,0 +1,39 @@
+@startuml
+
+hide circle
+title UML Concept Classes
+
+Class User {
+    login
+    password
+    email
+}
+
+Class SingRequest {
+    requestText
+    date
+}
+
+Class SingExpert {
+    name
+    specialization
+}
+
+Class MedicalConsultantRequest {
+    requestText
+    date
+}
+
+Class MedicalConsultant {
+    name
+    specialization
+}
+
+User <|-- SingExpert
+User"1" --> "*"SingRequest : send
+SingExpert"1" --> "*"SingRequest : review
+User <|-- MedicalConsultant
+User"1" --> "*"MedicalConsultantRequest : send
+MedicalConsultant"1" --> "*"MedicalConsultantRequest : review
+
+@enduml
