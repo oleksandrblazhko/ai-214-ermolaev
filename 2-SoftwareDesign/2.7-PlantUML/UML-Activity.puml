@@ -1,5 +1,5 @@
 @startuml
-title Activity Diagram 
+title Activity Diagram Ermolaev
 
 start
 :The user sends a request for medical consultation;
