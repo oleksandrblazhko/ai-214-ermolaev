@@ -1,0 +1,30 @@
+@startuml
+title Use case diagram
+left to right direction
+skinparam packageStyle rect
+actor User
+actor MedicalConsultant
+actor SingExpert
+rectangle Software {
+  User --> (Authorisation/Registration)
+  MedicalConsultant --> (Send Medical Recommendations)
+  (Send Medical Recommendations) --> User
+  SingExpert --> (Send Singing Teacher)
+  (Send Singing Teacher) --> User
+  MedicalConsultant --> (Receive Medical Consultation Request)
+  SingExpert --> (Receive Singing Teacher Request)
+
+  (Authorisation/Registration) <.. (Send Medical Recommendations) : <<include>>
+  (Authorisation/Registration) <.. (Send Medical Consultation Request) : <<include>>
+  (Authorisation/Registration) <.. (Receive Medical Consultation Request) : <<include>>
+  (Authorisation/Registration) <.. (View Medical Data) : <<include>>
+  (Authorisation/Registration) <.. (Send Singing Teacher Request) : <<include>>
+  (Authorisation/Registration) <.. (Send Singing Teacher) : <<include>>
+  (Authorisation/Registration) <.. (Save Environment Photos) : <<include>>
+  (Authorisation/Registration) <.. (Receive Singing Teacher Request) : <<include>>
+  (Send Art Advice Request) <. (Receive Singing Teacher Request) : <<extend>>
+  (Send Medical Consultation Request) <.. (View Medical Data) : <<include>>
+  (Send Art Advice Request) <.. (Save Environment Photos) : <<include>>
+  (Send Medical Consultation Request) <. (Receive Medical Consultation Request) : <<extend>>
+}
+@enduml
