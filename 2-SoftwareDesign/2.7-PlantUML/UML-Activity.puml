@@ -1,0 +1,19 @@
+@startuml
+title Activity Diagram 
+
+start
+:The user sends a request for medical consultation;
+if (Successfull?) then (Yes)
+  :The medical consultant responds to the request;
+  :Appoints a consultation time;
+  if (Successfull?) then (Yes)
+    :The user receives a response;
+  else (No)
+    :Error message;
+  endif
+else (No)
+  :Please wait for a reply;
+endif
+stop
+
+@enduml
