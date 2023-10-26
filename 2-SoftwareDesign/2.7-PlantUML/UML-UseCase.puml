@@ -1,0 +1,18 @@
+@startuml
+
+title Usecase Ermolaev
+left to right direction
+actor :User:
+
+rectangle Software {
+
+    usecase (Registration/Authorization)
+    usecase (Send a sing advice request)
+    usecase (Registration/Authorization)
+    usecase (Send a medical consultant request)
+   :User: -- (Registration/Authorization)
+   (Registration/Authorization) .> (Send a sing advice request) : include
+   (Registration/Authorization) .> (Send a medical consultant request) : include
+}
+
+@enduml
