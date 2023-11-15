@@ -5,28 +5,22 @@ title UML Concept Classes
 
 Class User {
     login
-    password
-    email
 }
 
 Class SingRequest {
     requestText
-    date
 }
 
 Class SingExpert {
     name
-    specialization
 }
 
 Class MedicalConsultantRequest {
     requestText
-    date
 }
 
 Class MedicalConsultant {
     name
-    specialization
 }
 
 User <|-- SingExpert
