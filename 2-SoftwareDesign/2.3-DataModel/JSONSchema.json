@@ -13,19 +13,10 @@
           "properties": {
             "login": {
               "type": "string"
-            },
-            "password": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string",
-              "format": "email"
             }
           },
           "required": [
-            "login",
-            "password",
-            "email"
+            "login"
           ]
         }
       }
@@ -39,17 +30,12 @@
             "purpose": {
               "type": "string"
             },
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
             "user id": {
               "type": "number"
             }
           },
           "required": [
             "purpose",
-            "date",
             "user id"
           ]
         },
@@ -59,17 +45,12 @@
             "purpose": {
               "type": "string"
             },
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
             "user id": {
               "type": "number"
             }
           },
           "required": [
             "purpose",
-            "date",
             "user id"
           ]
         }
@@ -89,8 +70,7 @@
             }
           },
           "required": [
-            "name",
-            "specialization"
+            "name"
           ]
         }
       }
@@ -103,14 +83,10 @@
           "properties": {
             "name": {
               "type": "string"
-            },
-            "specialization": {
-              "type": "string"
             }
           },
           "required": [
-            "name",
-            "specialization"
+            "name"
           ]
         }
       }
@@ -124,17 +100,12 @@
             "response text": {
               "type": "string"
             },
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
             "request id": {
               "type": "number"
             }
           },
           "required": [
             "response text",
-            "date",
             "request id"
           ]
         },
@@ -144,17 +115,12 @@
             "response text": {
               "type": "string"
             },
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
             "request id": {
               "type": "number"
             }
           },
           "required": [
             "response text",
-            "date",
             "request id"
           ]
         }
