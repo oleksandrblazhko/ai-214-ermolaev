@@ -12,7 +12,7 @@ if (Successfull?) then (Yes)
     :Error message;
   endif
 else (No)
-  :Please wait for a reply;
+  :Error message;
 endif
 stop
 

@@ -15,22 +15,10 @@
               "description": "Логін користувача",
               "type": "string",
               "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{6,25}$"
-            },
-            "password": {
-              "description": "Пароль користувача",
-              "type": "string",
-              "pattern": "^(?=.*[a-z])(?=.*[A-Z])[A-Za-z!@#$%^&*()_+]{6,25}$"
-            },
-            "email": {
-              "description": "Електрона пошта користувача",
-              "type": "string",
-              "format": "email"
             }
           },
           "required": [
-            "login",
-            "password",
-            "email"
+            "login"
           ]
         }
       },
@@ -59,7 +47,6 @@
             }
           },
           "required": [
-            "specialization",
             "user id"
           ]
         }
@@ -82,11 +69,6 @@
               "minLength": 1,
               "maxLength": 500
             },
-            "date": {
-              "description": "Дата створення запиту",
-              "type": "string",
-              "format": "date"
-            },
             "user id": {
               "description": "Номер користувача, який кинув запит",
               "type": "number",
@@ -95,7 +77,6 @@
           },
           "required": [
             "purpose",
-            "date",
             "user id"
           ]
         }
@@ -118,11 +99,6 @@
               "minLength": 1,
               "maxLength": 500
             },
-            "date": {
-              "description": "Дата відповіді на запит",
-              "type": "string",
-              "format": "date"
-            },
             "request id": {
               "description": "Номер запиту,на який йде відповідь",
               "type": "number",
@@ -131,7 +107,6 @@
           },
           "required": [
             "response text",
-            "date",
             "request id"
           ]
         }
@@ -161,7 +136,6 @@
             }
           },
           "required": [
-            "specialization",
             "user id"
           ]
         }
@@ -186,8 +160,7 @@
             },
             "date": {
               "description": "Дата створення запиту",
-              "type": "string",
-              "format": "date"
+              "type": "string"
             },
             "user id": {
               "description": "Номер користувача, який кинув запит",
@@ -197,7 +170,6 @@
           },
           "required": [
             "purpose",
-            "date",
             "user id"
           ]
         }
@@ -220,11 +192,6 @@
               "minLength": 1,
               "maxLength": 500
             },
-            "date": {
-              "description": "Дата відповіді на запит",
-              "type": "string",
-              "format": "date"
-            },
             "request id": {
               "description": "Номер запиту,на який йде відповідь",
               "type": "number",
@@ -233,7 +200,6 @@
           },
           "required": [
             "response text",
-            "date",
             "request id"
           ]
         }
