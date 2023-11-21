@@ -1,7 +1,7 @@
 name: ProgramCode
 on: 
   push:
-    branches: LW11
+    branches: LW1
 jobs:
   ProgramCode:
     runs-on: ubuntu-latest
