@@ -1,0 +1,23 @@
+name: Test Cases
+on:
+  push:
+    branches: LW1
+
+jobs:
+  TestCases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Set up JDK 19
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '19'
+
+      - name: Compile & Execute
+        run: |
+          cd $GITHUB_WORKSPACE/
+          kotlinc TestCases.kt -include-runtime -d app.jar
+          java -jar app.jar
