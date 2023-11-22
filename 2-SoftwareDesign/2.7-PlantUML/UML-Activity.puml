@@ -6,11 +6,7 @@ start
 if (Successfull?) then (Yes)
   :The medical consultant responds to the request;
   :Appoints a consultation time;
-  if (Successfull?) then (Yes)
-    :The user receives a response;
-  else (No)
-    :Error message;
-  endif
+  :The user receives a response;
 else (No)
   :Error message;
 endif
