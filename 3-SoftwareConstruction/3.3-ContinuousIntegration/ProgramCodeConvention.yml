@@ -1,0 +1,16 @@
+name: ProgramCode
+on: 
+  push:
+    branches: LW1
+jobs:
+  ProgramCode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Execute
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_KOTLIN: true
+          FILTER_REGEX_INCLUDE: ./*.kt
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
